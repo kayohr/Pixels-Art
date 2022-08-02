@@ -1,0 +1,35 @@
+#color-palette{
+    width: 500px;
+    height: 50px;
+
+}
+
+.color{
+    /*border-radius: 50%;*/
+    border: black solid 1px;
+  
+    width: 100px;
+    height: 100px; 
+    display: inline-block; 
+}
+
+
+.preto{
+    background: black;
+    
+}
+
+.azul{
+    background: blue;
+    
+}
+
+.verde{
+    background:green;
+    
+}
+
+.vermelho{
+    background: red;
+    
+}
