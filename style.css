@@ -53,6 +53,7 @@ body {
   grid-template-rows: repeat(var(--select), 1fr);
   gap: 2px;
   padding: 3px;
+  
 }
 
 .pixel {
@@ -61,4 +62,5 @@ body {
   width: 40px;
   border-radius: 2px;
   display: block;
+  border: black solid 1px;
 }
