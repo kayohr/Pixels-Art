@@ -46,7 +46,8 @@ body {
 }
 
 #pixel-board {
-  --select: 5;
+  /*www.youtube.com/watch?v=wZZyhrJxZRU*/
+--select: 5;
   height: 20px;
   display: grid;
   grid-template-columns: repeat(var(--select), 1fr);
