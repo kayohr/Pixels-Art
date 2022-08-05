@@ -30,19 +30,19 @@ body {
 }
 
 .preto {
-  background: black;
+  background: black !important;
 }
 
 .azul {
-  background: blue;
+  background: blue !important;
 }
 
 .verde {
-  background: green;
+  background: green !important;
 }
 
 .vermelho {
-  background: red;
+  background: red !important;
 }
 
 #pixel-board {

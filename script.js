@@ -1,4 +1,4 @@
-let elementLi = document.querySelectorAll('li');
+/*let elementLi = document.querySelectorAll('li');*/
 
 //https://www.youtube.com/watch?v=wZZyhrJxZRU
 function square(select) {
@@ -12,22 +12,31 @@ function square(select) {
 }
 square(5);
 
-function add_remover(novo_selecionado){
-  let elemento_selecionado=document.getElementsByClassName('selected');
-elemento_selecionado[0].classList.remove('selected');
-novo_selecionado.classList.add('selected');
+function add_remover(novo_selecionado) {
+  let elemento_selecionado = document.getElementsByClassName('selected');
+  elemento_selecionado[0].classList.remove('selected');
+  novo_selecionado.classList.add('selected');
 }
 
+function paletaDeCores(elementSelecionado) {
+  console.log(elementSelecionado.style);
+  let corPaletaSelecionada = document.getElementsByClassName('selected');
+  let objetoSelecionado = corPaletaSelecionada[0];
+  console.log(objetoSelecionado.classList);
 
-
-/*function add_remover(alteracaoDeItem) {
-  let cores = document.getElementsByClassName('color');
-  for (let i = 0; i < cores.length; i += 1) {
-    if (cores[i].classList.contains('selected')) {
-      cores[i].classList.remove('selected');
-    } else {
-      alteracaoDeItem.classList.add('selected');
-    }
-  }
+  let classe = objetoSelecionado.classList.value;
+  classe = classe.replace('selected', '').replace('color', '').replace(/\s/g, '');
+  elementSelecionado.classList.add(classe);
+  console.log(elementSelecionado);
 }
-add_remover();*/
+
+let div = document.getElementsByTagName('div');
+for (let i = 0; i < div.length; i += 1) {
+  div[i].onclick = function (elemento) {
+    paletaDeCores(elemento.target);
+  };
+}
+//div.addEventListener('click', paletaDeCores(this));
+//ler o valor do input, fazer as validações necessarias
+//chamar a funcao square passando o valor do input
+//como descobrir o valor do input
