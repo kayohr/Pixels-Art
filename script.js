@@ -1,5 +1,3 @@
-/*let elementLi = document.querySelectorAll('li');*/
-
 //https://www.youtube.com/watch?v=wZZyhrJxZRU
 function square(select) {
   /*pixelBoard.style.setProperty('--select', select);*/
@@ -25,7 +23,10 @@ function paletaDeCores(elementSelecionado) {
   console.log(objetoSelecionado.classList);
 
   let classe = objetoSelecionado.classList.value;
-  classe = classe.replace('selected', '').replace('color', '').replace(/\s/g, '');
+  classe = classe
+    .replace('selected', '')
+    .replace('color', '')
+    .replace(/\s/g, '');
   elementSelecionado.classList.add(classe);
   console.log(elementSelecionado);
 }
@@ -36,6 +37,16 @@ for (let i = 0; i < div.length; i += 1) {
     paletaDeCores(elemento.target);
   };
 }
+
+
+/*let apagar = document.getElementById('clear-board');
+apagar.addEventListener('click', function () {
+  let pixelBoard = document.querySelector('#pixel-board');
+  let pixel = document.getElementsByClassName('pixel');
+  pixelBoard.innerText = '';
+  square(pixelBoard);
+});*/
+
 //div.addEventListener('click', paletaDeCores(this));
 //ler o valor do input, fazer as validações necessarias
 //chamar a funcao square passando o valor do input
