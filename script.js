@@ -1,9 +1,9 @@
-//https://www.youtube.com/watch?v=wZZyhrJxZRU
+// https://www.youtube.com/watch?v=wZZyhrJxZRU
 function square(select) {
-  /*pixelBoard.style.setProperty('--select', select);*/
-  let pixelBoard = document.querySelector('#pixel-board');
+  /* pixelBoard.style.setProperty('--select', select); */
+  const pixelBoard = document.querySelector('#pixel-board');
   for (let i = 0; i < select * select; i += 1) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.classList.add('pixel');
     pixelBoard.appendChild(div);
   }
@@ -11,16 +11,16 @@ function square(select) {
 square(5);
 
 function add_remover(novo_selecionado) {
-  let elemento_selecionado = document.getElementsByClassName('selected');
+  const elemento_selecionado = document.getElementsByClassName('selected');
   elemento_selecionado[0].classList.remove('selected');
   novo_selecionado.classList.add('selected');
 }
 
 function paletaDeCores(elementSelecionado) {
-  console.log(elementSelecionado.style);
-  let corPaletaSelecionada = document.getElementsByClassName('selected');
-  let objetoSelecionado = corPaletaSelecionada[0];
-  console.log(objetoSelecionado.classList);
+  /* console.log(elementSelecionado.style); */
+  const corPaletaSelecionada = document.getElementsByClassName('selected');
+  const objetoSelecionado = corPaletaSelecionada[0];
+  /* console.log(objetoSelecionado.classList); */
 
   let classe = objetoSelecionado.classList.value;
   classe = classe
@@ -28,26 +28,25 @@ function paletaDeCores(elementSelecionado) {
     .replace('color', '')
     .replace(/\s/g, '');
   elementSelecionado.classList.add(classe);
-  console.log(elementSelecionado);
+  /* console.log(elementSelecionado); */
 }
 
-let div = document.getElementsByTagName('div');
+const div = document.getElementsByTagName('div');
 for (let i = 0; i < div.length; i += 1) {
   div[i].onclick = function (elemento) {
     paletaDeCores(elemento.target);
   };
 }
 
+const apagar = document.getElementById('clear-board');
 
-/*let apagar = document.getElementById('clear-board');
-apagar.addEventListener('click', function () {
-  let pixelBoard = document.querySelector('#pixel-board');
-  let pixel = document.getElementsByClassName('pixel');
-  pixelBoard.innerText = '';
-  square(pixelBoard);
-});*/
-
-//div.addEventListener('click', paletaDeCores(this));
-//ler o valor do input, fazer as validações necessarias
-//chamar a funcao square passando o valor do input
-//como descobrir o valor do input
+//https://stackoverflow.com/questions/36396497/get-all-items-that-start-with-class-name
+function apagando() {
+  let potentials = document.querySelectorAll("[class*=pixel]");//puxando todas as classes que tem pixel no nome.O * é para buscar em qualquer parte do elemento
+//console.log(potentials)
+  for (let i = 0; i < potentials.length; i += 1) {
+   potentials[i].className= 'pixel'
+    console.log(potentials[i]);
+  }
+}
+apagar.addEventListener('click', apagando);

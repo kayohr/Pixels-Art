@@ -29,6 +29,14 @@ body {
   margin: 0 1em;
 }
 
+.pixel {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 2px;
+  display: block;
+  border: black solid 1px;
+}
 .preto {
   background: black !important;
 }
@@ -57,11 +65,3 @@ body {
   
 }
 
-.pixel {
-  background-color: white;
-  height: 40px;
-  width: 40px;
-  border-radius: 2px;
-  display: block;
-  border: black solid 1px;
-}
